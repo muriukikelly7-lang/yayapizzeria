@@ -743,6 +743,41 @@ p {
 }
 
 @media (max-width: 640px) {
+  .nav-wrap {
+    gap: 10px;
+  }
+
+  .brand-logo {
+    gap: 8px;
+  }
+
+  .badge-mark {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .yaya-word {
+    font-size: 2rem;
+  }
+
+  .pizzeria-word {
+    font-size: 1rem;
+    margin-left: 12px;
+  }
+
+  .nav-wrap > .btn {
+    width: auto;
+    flex: 0 0 auto;
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .nav-toggle {
+    flex: 0 0 26px;
+  }
+
   .hero {
     min-height: 640px;
   }
