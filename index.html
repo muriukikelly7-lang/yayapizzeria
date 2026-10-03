@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yaya Pizzeria</title>
+    <meta
+      name="description"
+      content="Yaya Pizzeria is a refined Italian dining destination blending artisan pizza, elegant hospitality, and memorable evenings."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/254714835853?text=Hello%20Yaya%20Pizzeria%2C%20I%20would%20like%20to%20place%20an%20order."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.45 0 .08 5.36.08 11.95c0 2.1.55 4.16 1.6 5.97L0 24l6.28-1.65a11.96 11.96 0 0 0 5.78 1.75h.01c6.61 0 11.98-5.36 11.98-11.95 0-3.2-1.25-6.2-3.48-8.47ZM12.06 21.8h-.01a9.94 9.94 0 0 1-5.08-1.39l-.36-.21-3.73.98 1-3.64-.24-.38a9.95 9.95 0 0 1-1.53-5.2c0-5.5 4.47-9.97 9.97-9.97 2.66 0 5.17 1.04 7.06 2.93A9.88 9.88 0 0 1 21.98 11.9c0 5.5-4.47 9.97-9.97 9.97Zm5.48-7.46c-.3-.15-1.78-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.5-1.8-1.68-2.1-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.38-.01-.58-.01-.2 0-.53.08-.8.38-.27.3-1.03 1-1.03 2.45 0 1.45 1.06 2.84 1.2 3.04.15.2 2.08 3.17 5.05 4.45.71.3 1.25.48 1.67.62.71.23 1.35.2 1.86.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.32.18-1.45-.07-.13-.27-.2-.58-.35Z"/>
+      </svg>
+    </a>
+
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand" aria-label="Yaya Pizzeria home">
+          <div class="brand-logo" aria-label="Yaya Pizzeria">
+            <img
+              class="badge-mark"
+              src="assets/pizza-badge.jpg"
+              alt="Yaya Pizzeria pizza logo"
+            />
+            <div class="brand-wordmark">
+              <span class="yaya-word">yaya</span>
+              <span class="pizzeria-word">Pizzeria</span>
+            </div>
+          </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#booking" class="btn btn-primary">Reserve a Table</a>
+        <button class="nav-toggle" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Fine dining • artisan hospitality</p>
+          <h1>Where fire, flavor, and fine dining feel like home.</h1>
+          <p class="hero-copy">
+            Yaya Pizzeria is a refined dining destination where bold Italian cooking,
+            warm service, and elegant social spaces turn every meal into a memorable occasion.
+          </p>
+          <div class="hero-actions">
+            <a href="#booking" class="btn btn-primary">Book a Table</a>
+            <a href="#experience" class="btn btn-secondary">Explore Experience</a>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <strong>12+</strong>
+              <span>Signature dishes</span>
+            </div>
+            <div>
+              <strong>4.9/5</strong>
+              <span>Dining experience</span>
+            </div>
+            <div>
+              <strong>Open daily</strong>
+              <span>Chef-led service</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features container">
+        <div class="feature-card">
+          <span>01</span>
+          <h3>Chef's Table</h3>
+          <p>Intimate dining crafted around fire, ingredients, and unforgettable flavor.</p>
+        </div>
+        <div class="feature-card">
+          <span>02</span>
+          <h3>Signature Menu</h3>
+          <p>Wood-fired pizza, handcrafted pastas, and refined cocktails in one setting.</p>
+        </div>
+        <div class="feature-card">
+          <span>03</span>
+          <h3>Private Events</h3>
+          <p>Elegant gatherings, celebrations, and curated hospitality experiences.</p>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="container about-grid">
+          <div class="about-image-card">
+            <img
+              class="image-panel main"
+              src="assets/pizza-hero.jpg"
+              alt="Yaya Pizzeria pizza"
+            />
+            <img
+              class="image-panel secondary"
+              src="assets/food-platter.jpg"
+              alt="Yaya Pizzeria food detail"
+            />
+          </div>
+          <div class="about-copy">
+            <p class="eyebrow dark">About us</p>
+            <h2>A refined dining experience shaped by flavor, craft, and atmosphere.</h2>
+            <p>
+              Yaya Pizzeria brings together bold Italian flavors, polished hospitality,
+              and memorable evenings designed around exceptional food and warm conversation.
+            </p>
+            <p>
+              From slow dinners to lively gatherings, every detail is curated to feel elevated,
+              welcoming, and effortlessly memorable—from the first bite to the final toast.
+            </p>
+            <ul class="check-list">
+              <li>Italian-inspired menu with elevated ingredients</li>
+              <li>Chef-led dining experiences and curated pairings</li>
+              <li>Private celebrations and unforgettable culinary moments</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="rooms section" id="experience">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow dark">Signature dining</p>
+            <h2>Every moment is crafted around taste, warmth, and shared flavor.</h2>
+          </div>
+
+          <div class="room-grid">
+            <article class="room-card">
+              <div class="room-image room-one"></div>
+              <div class="room-body">
+                <div class="room-topline">
+                  <h3>Chef's Table</h3>
+                  <span>Chef-led</span>
+                </div>
+                <p>An intimate tasting experience shaped by seasonal ingredients and live culinary storytelling.</p>
+                <ul>
+                  <li>Seasonal tasting</li>
+                  <li>Wine pairing</li>
+                  <li>Chef interaction</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="room-card featured">
+              <div class="room-image room-two"></div>
+              <div class="room-body">
+                <div class="room-topline">
+                  <h3>Private Dining</h3>
+                  <span>Exclusive</span>
+                </div>
+                <p>Thoughtfully curated dinners for intimate gatherings, celebrations, and unforgettable evenings.</p>
+                <ul>
+                  <li>Custom menus</li>
+                  <li>Event hosting</li>
+                  <li>Elegant atmosphere</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="room-card">
+              <div class="room-image room-three"></div>
+              <div class="room-body">
+                <div class="room-topline">
+                  <h3>Sunset Lounge</h3>
+                  <span>After dark</span>
+                </div>
+                <p>A refined social dining experience with cocktails, bites, and golden-hour energy.</p>
+                <ul>
+                  <li>Sunset views</li>
+                  <li>Signature drinks</li>
+                  <li>Warm ambience</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dining section" id="dining">
+        <div class="container dining-grid">
+          <div class="dining-copy">
+            <p class="eyebrow dark">Dining</p>
+            <h2>Crafted flavors, warm evenings, and unforgettable bites.</h2>
+            <p>
+              Freshly baked pizzas, burgers, coffee, milkshakes, and the popular shared Yaya Platter are served in a cozy setting made for relaxed dining and quick takeaway stops.
+            </p>
+            <div class="menu-list">
+              <div>
+                <span>Freshly baked pizzas</span>
+                <strong>Signature</strong>
+              </div>
+              <div>
+                <span>Burgers</span>
+                <strong>Classic</strong>
+              </div>
+              <div>
+                <span>Yaya Platter</span>
+                <strong>Shared</strong>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary">Order Now</a>
+          </div>
+
+          <div class="dining-card">
+            <div class="dining-image"></div>
+            <div class="dining-panel">
+              <p class="label">Chef's special</p>
+              <h3>Yaya Signature Pizza</h3>
+              <p>Wood-fired crust, roasted tomato sauce, fresh basil, burrata, and smoked chili.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow dark">Gallery</p>
+            <h2>Moments worth returning for.</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item tall"></div>
+            <div class="gallery-item wide"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item wide"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking section" id="booking">
+        <div class="container booking-panel">
+          <div class="booking-copy">
+            <p class="eyebrow dark">Reserve now</p>
+            <h2>Plan your next memorable dinner experience.</h2>
+          </div>
+
+          <form class="booking-form">
+            <label>
+              Date
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              Time
+              <select name="time" required>
+                <option value="" disabled selected>Select a time</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+                <option>8:00 PM</option>
+                <option>9:00 PM</option>
+              </select>
+            </label>
+            <label>
+              Guests
+              <select name="guests" required>
+                <option value="" disabled selected>Select party size</option>
+                <option>2 Guests</option>
+                <option>4 Guests</option>
+                <option>6 Guests</option>
+                <option>8+ Guests</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-primary">Check Availability</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="testimonials section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow dark">Guest reviews</p>
+            <h2>Loved by diners and food lovers alike.</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <blockquote>
+              “The space was elegant, the pizza was exceptional, and the atmosphere felt like a hidden luxury dining retreat.”
+              <footer>— Nina A.</footer>
+            </blockquote>
+            <blockquote>
+              “Perfect mix of comfort and flavor. We loved the ambience and the attentive staff.”
+              <footer>— Daniel M.</footer>
+            </blockquote>
+            <blockquote>
+              “A memorable evening for our anniversary. It felt intimate, warm, and beautifully curated.”
+              <footer>— Chloe T.</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <a href="#home" class="brand footer-brand">
+            <div class="brand-logo small" aria-label="Yaya Pizzeria">
+              <img
+                class="badge-mark"
+                src="assets/pizza-badge.jpg"
+                alt="Yaya Pizzeria logo"
+              />
+              <div class="brand-wordmark">
+                <span class="yaya-word">yaya</span>
+                <span class="pizzeria-word">Pizzeria</span>
+              </div>
+            </div>
+          </a>
+          <p>Artisan dining and elevated hospitality for unforgettable table moments.</p>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>0714 835 853</li>
+            <li>0719 311 151</li>
+            <li>Ngeka Centre, behind Cooperative Bank, Murang'a</li>
+            <li>Monday to Sunday · Open until around 8:30 PM</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Hours</h4>
+          <ul>
+            <li>Dine-in</li>
+            <li>Takeaway</li>
+            <li>Door delivery</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Yaya Pizzeria. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

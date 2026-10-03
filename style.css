@@ -1,0 +1,781 @@
+:root {
+  --bg: #f5efe8;
+  --bg-soft: #f8f4ef;
+  --card: #fffdfb;
+  --panel: #f1e5d5;
+  --text: #1e1b1a;
+  --muted: #685e58;
+  --accent: #c98d48;
+  --accent-dark: #8f5e2e;
+  --line: rgba(30, 27, 26, 0.08);
+  --shadow: 0 24px 65px rgba(35, 22, 17, 0.1);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.35);
+  z-index: 50;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 18px 36px rgba(37, 211, 102, 0.45);
+}
+
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.container {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 110px 0;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.eyebrow.dark {
+  color: var(--accent-dark);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 18px;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(3.3rem, 6vw, 6rem);
+  max-width: 620px;
+}
+
+h2 {
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  max-width: 620px;
+}
+
+p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(24, 18, 15, 0.55);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 82px;
+  gap: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+}
+
+.brand-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  transform: translateY(2px);
+}
+
+.badge-mark {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.18), 0 8px 18px rgba(16, 45, 91, 0.18);
+  transform: rotate(-9deg);
+  overflow: hidden;
+  background: #e8d2a6;
+}
+
+.badge-mark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(13, 44, 91, 0.16);
+}
+
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.82;
+}
+
+.yaya-word,
+.pizzeria-word {
+  display: inline-block;
+  font-family: "Segoe Print", "Bradley Hand", cursive;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.yaya-word {
+  color: #0d2c5f;
+  font-size: clamp(2.7rem, 5vw, 5.8rem);
+  transform: rotate(-5deg);
+  margin-left: 2px;
+}
+
+.pizzeria-word {
+  color: #f39b46;
+  font-size: clamp(1.9rem, 3.2vw, 3.6rem);
+  margin-left: 30px;
+  transform: rotate(2deg);
+}
+
+.brand-logo.small .badge-mark {
+  width: 42px;
+  height: 42px;
+  font-size: 1.8rem;
+}
+
+.brand-logo.small .yaya-word {
+  font-size: clamp(2rem, 3.3vw, 3.2rem);
+}
+
+.brand-logo.small .pizzeria-word {
+  font-size: clamp(1.35rem, 2.2vw, 2.2rem);
+  margin-left: 18px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-nav a {
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  display: block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 15px 28px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #e8b56a);
+  color: #1a110d;
+  box-shadow: 0 18px 35px rgba(201, 141, 72, 0.25);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+  background-color: #c98d58;
+  background-image: linear-gradient(rgba(20, 14, 11, 0.18), rgba(20, 14, 11, 0.18)), url("./assets/pizza-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(14, 10, 9, 0.82), rgba(14, 10, 9, 0.32));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 120px 0 60px;
+  color: #fff;
+}
+
+.hero-copy {
+  max-width: 540px;
+  font-size: 1.08rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  margin-top: 52px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-meta div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero-meta strong {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 700;
+}
+
+.hero-meta span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+
+.feature-card span {
+  display: inline-block;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.about-grid,
+.dining-grid {
+  display: grid;
+  grid-template-columns: 1.02fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-image-card {
+  position: relative;
+  min-height: 520px;
+}
+
+.image-panel {
+  position: absolute;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  display: block;
+}
+
+.image-panel.main {
+  inset: 0 90px 54px 0;
+  width: calc(100% - 90px);
+  height: calc(100% - 54px);
+  background-color: #edd3a9;
+}
+
+.image-panel.secondary {
+  right: 0;
+  bottom: 0;
+  width: 43%;
+  height: 42%;
+  border: 10px solid var(--bg);
+  background-color: #d7b17d;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  gap: 14px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.check-list li::before {
+  content: "✓";
+  color: var(--accent-dark);
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.section-head {
+  margin-bottom: 38px;
+}
+
+.room-grid,
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.room-card {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(31, 23, 18, 0.04);
+}
+
+.room-card.featured {
+  transform: translateY(-10px);
+}
+
+.room-image {
+  height: 290px;
+  background-size: cover;
+  background-position: center;
+}
+
+.room-one {
+  background-color: #ead9b5;
+  background-image: linear-gradient(rgba(17, 13, 9, 0.06), rgba(17, 13, 9, 0.06)), url("./assets/food-pasta.jpg");
+}
+
+.room-two {
+  background-color: #d2aa6b;
+  background-image: linear-gradient(rgba(17, 13, 9, 0.08), rgba(17, 13, 9, 0.08)), url("./assets/food-steak.jpg");
+}
+
+.room-three {
+  background-color: #d8c08b;
+  background-image: linear-gradient(rgba(17, 13, 9, 0.08), rgba(17, 13, 9, 0.08)), url("./assets/food-burger.jpg");
+}
+
+.room-body {
+  padding: 26px 22px 28px;
+}
+
+.room-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.room-topline h3 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.room-topline span {
+  font-size: 0.8rem;
+  color: var(--accent-dark);
+  font-weight: 700;
+  background: rgba(201, 141, 72, 0.12);
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+.room-body ul {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 18px 0 0;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.room-body li::before {
+  content: "•";
+  color: var(--accent-dark);
+  margin-right: 10px;
+}
+
+.dining {
+  background: #f1e7dc;
+}
+
+.dining-copy {
+  max-width: 560px;
+}
+
+.menu-list {
+  display: grid;
+  gap: 18px;
+  margin: 28px 0 30px;
+}
+
+.menu-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(30, 27, 26, 0.08);
+  color: var(--text);
+}
+
+.dining-card {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.dining-image {
+  height: 400px;
+  background-color: #e3c598;
+  background-image: linear-gradient(rgba(17, 13, 9, 0.05), rgba(17, 13, 9, 0.05)), url("./assets/pizza-feature-main.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dining-panel {
+  padding: 24px 22px 30px;
+}
+
+.label {
+  margin-bottom: 12px;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gallery-item {
+  min-height: 220px;
+  border-radius: 22px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 18px 40px rgba(12, 10, 9, 0.08);
+}
+
+.gallery-item:nth-child(1) {
+  background-color: #e3cea4;
+  background-image: linear-gradient(rgba(17, 13, 9, 0.06), rgba(17, 13, 9, 0.06)), url("./assets/pizza-hero.jpg");
+}
+
+.gallery-item:nth-child(2) {
+  background-color: #d8ba7a;
+  background-image: linear-gradient(rgba(17, 13, 9, 0.06), rgba(17, 13, 9, 0.06)), url("./assets/food-pasta.jpg");
+}
+
+.gallery-item:nth-child(3) {
+  background-color: #d8b267;
+  background-image: linear-gradient(rgba(17, 13, 9, 0.06), rgba(17, 13, 9, 0.06)), url("./assets/food-burger.jpg");
+}
+
+.gallery-item:nth-child(4) {
+  background-color: #e0c7a3;
+  background-image: linear-gradient(rgba(17, 13, 9, 0.06), rgba(17, 13, 9, 0.06)), url("./assets/food-platter.jpg");
+}
+
+.gallery-item:nth-child(5) {
+  background-color: #dcae65;
+  background-image: linear-gradient(rgba(17, 13, 9, 0.06), rgba(17, 13, 9, 0.06)), url("./assets/food-steak.jpg");
+}
+
+.gallery-item.tall {
+  grid-row: span 2;
+  min-height: 460px;
+}
+
+.gallery-item.wide {
+  grid-column: span 2;
+}
+
+.booking-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 34px 30px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 228, 214, 0.9));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.booking-form {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: end;
+}
+
+.booking-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.booking-form input,
+.booking-form select {
+  border: 1px solid rgba(30, 27, 26, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  min-height: 56px;
+  padding: 0 14px;
+  color: var(--text);
+}
+
+.testimonial-grid blockquote {
+  margin: 0;
+  padding: 30px 26px;
+  background: rgba(255, 255, 255, 0.54);
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 24px rgba(31, 23, 18, 0.04);
+  color: var(--text);
+  font-size: 1.06rem;
+}
+
+.testimonial-grid footer {
+  margin-top: 18px;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #1d1715;
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: 54px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 30px;
+}
+
+.footer-brand {
+  margin-bottom: 16px;
+}
+
+.site-footer h4 {
+  margin-bottom: 16px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  margin-top: 28px;
+  padding: 18px 0 26px;
+}
+
+@media (max-width: 980px) {
+  .main-nav {
+    position: absolute;
+    inset: 82px 16px auto 16px;
+    display: none;
+    flex-direction: column;
+    padding: 22px 18px;
+    background: rgba(18, 13, 13, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    align-items: flex-start;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .features,
+  .room-grid,
+  .testimonial-grid,
+  .footer-grid,
+  .booking-form,
+  .about-grid,
+  .dining-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-item.wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 640px;
+  }
+
+  .hero-content {
+    padding-top: 90px;
+  }
+
+  .hero-meta {
+    gap: 18px;
+    flex-direction: column;
+  }
+
+  .features {
+    margin-top: -30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item.tall,
+  .gallery-item.wide {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 220px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+}
